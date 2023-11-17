@@ -28,7 +28,7 @@ assertEqual(resultTwo[0], undefined);
 
 // Test Case 3: Check the returned array for an empty array
 const resultThree = tail([]);
-assertEqual(resultThree.length, undefined); 
+assertEqual(resultThree.length, 0); 
 assertEqual(resultThree[0], undefined); 
 
 
