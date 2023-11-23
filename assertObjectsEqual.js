@@ -56,11 +56,11 @@ const newPalestine = {
   adults: "less than half"
 };
 
-assertObjectEqual(eqObjects(oldPalestine, newPalestine),true);
+assertObjectEqual(oldPalestine, newPalestine);
 
 const canada = {
   children: "less than half",
   adults: "more than half"
 };
 
-assertObjectEqual(eqObjects(oldPalestine, canada), false);
+assertObjectEqual(oldPalestine, canada);
