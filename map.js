@@ -42,6 +42,6 @@ const assertArraysEqual = function(arr1, arr2) {
 
 //Test Cases
 
-assertArraysEqual(map(words, word => word[0]), expected_output);
+assertArraysEqual(map(words, word => word[0]), [ 'g', 'c', 't', 'm', 't' ]);
 
 
