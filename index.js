@@ -22,7 +22,7 @@ const without = require('./without');
 module.exports = {
   head,
   tail,
-  middle: middle,
+  middle,
   assertArraysEqual,
   assertEqual,
   assertObjectsEqual,
