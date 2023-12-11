@@ -1,0 +1,26 @@
+{
+  "name": "@absentcodes/lotide",
+  "version": "1.0.0",
+  "description": "used for testing",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/absentcodes/lotide.git"
+  },
+  "author": "Absent Codes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/absentcodes/lotide/issues"
+  },
+  "homepage": "https://github.com/absentcodes/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^9.2.2"
+  }
+}
