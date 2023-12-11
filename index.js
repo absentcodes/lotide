@@ -1,4 +1,6 @@
 // index.js
+
+// Importing required functions from separate files
 const head   = require('./head');
 const tail   = require('./tail');
 const middle = require('./middle');
@@ -18,7 +20,7 @@ const without = require('./without');
 
 
 
-
+// Exporting all the functions as a single object
 module.exports = {
   head,
   tail,

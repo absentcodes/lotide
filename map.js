@@ -1,10 +1,10 @@
-const words = ["ground", "control", "to", "major", "tom"];
+const words = ["ground", "control", "to", "major", "tom"]; // Array of words
 
 
-const map = function(array, callback) {
-  const results = [];
-  for (let item of array) {
-    results.push(callback(item));
+const map = function(array, callback) { // Function that maps each element of an array using a callback function
+  const results = [];  // Initialize an empty array to store the results
+  for (let item of array) { // Loop through each element in the input array
+    results.push(callback(item)); // Apply the callback function to each element and store the result
   }
 
   return results;
@@ -14,9 +14,9 @@ const map = function(array, callback) {
 const results1 = map(words, word => word[0]);
 console.log(results1);
 
-//AssertionTests
 
-const eqArrays = function(arr1, arr2) {
+//AssertionTests
+const eqArrays = function(arr1, arr2) { // Using the eqArrays function
   if (arr1.length !== arr2.length) {
     return false;
   }
@@ -29,7 +29,7 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-const assertArraysEqual = function(arr1, arr2) {
+const assertArraysEqual = function(arr1, arr2) { // Using the assertArraysEqual Function
   const arraysAreEqual = eqArrays(arr1, arr2);
 
   if (arraysAreEqual) {
@@ -41,7 +41,6 @@ const assertArraysEqual = function(arr1, arr2) {
 };
 
 //Test Cases
-
 assertArraysEqual(map(words, word => word[0]), [ 'g', 'c', 't', 'm', 't' ]);
 
 

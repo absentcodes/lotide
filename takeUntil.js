@@ -1,17 +1,18 @@
 const takeUntil = function(array, callback) {
-  const result = [];
+  const result = [];  // Initialize an empty array to store results
   for (const item of array) {
     if (!callback(item)) {
-      result.push(item);
+      result.push(item); // Push items to result until the callback condition is met
     } else {
-      break;
+      break; // Stop iteration if the callback condition is met
     }
   }
-  return result;
+  return result; // Return the resulting array
 };
 
 
-const eqArrays = function(arr1, arr2) {
+// Assertion Tests
+const eqArrays = function(arr1, arr2) { // Using the eqArrays fucntion
   if (arr1.length !== arr2.length) {
     return false;
   }
@@ -24,7 +25,7 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-const assertArraysEqual = function(arr1, arr2) {
+const assertArraysEqual = function(arr1, arr2) { // Using the assertArraysEqual function
   const arraysAreEqual = eqArrays(arr1, arr2);
 
   if (arraysAreEqual) {
@@ -36,6 +37,7 @@ const assertArraysEqual = function(arr1, arr2) {
 };
 
 
+// Test Cases
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, x => x < 0);
 assertArraysEqual(results1, [1,2,5,7,2]);

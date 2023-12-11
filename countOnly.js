@@ -1,4 +1,4 @@
-const assertEqual = function(actual, expected) {
+const assertEqual = function(actual, expected) { //Using assertEqual function
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -7,38 +7,26 @@ const assertEqual = function(actual, expected) {
 };
 
 
-// allItems: an array of strings that we need to look through
-// itemsToCount: an object specifying what to count
-const countOnly = function(allItems, itemsToCount) {
-  const results = {};
 
-  for (const item of allItems) {
-    // inside the loop,
-    // increment the counter for each item:
-    //   set a property with that string key to:
-    //     the value that was already there (or zero if nothing there) with 1 added to it.
-    // inside the loop:
-    if (itemsToCount[item]) {
+const countOnly = function(allItems, itemsToCount) { // Defining a function countOnly to count specific items in an array
+  const results = {};// Initialize an empty object to store counts of specific items
+
+  for (const item of allItems) { // Iterate through each item in the allItems array
+    if (itemsToCount[item]) { // Check if the current item exists in itemsToCount
       if (results[item]) {
-        results[item] += 1;
+        results[item] += 1;  // If the item already exists in the results, increment its count
       } else {
-        results[item] = 1;
+        results[item] = 1; // If the item does not exist in the results, set its count to 1
       }
     }
   
   }
 
-  return results;
+  return results; 
 
 };
 
-
-
-
-
-
-
-
+// Test data - an array of first names
 const firstNames = [
   "Karl",
   "Salima",
@@ -52,9 +40,10 @@ const firstNames = [
 ];
 
 
-
+// Count specific items in the firstNames array based on the given criteria
 const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
 
+// Testing the counts of specific items using assertEqual function
 assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);

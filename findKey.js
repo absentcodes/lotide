@@ -1,4 +1,4 @@
-const assertEqual = function(actual, expected) {
+const assertEqual = function(actual, expected) { // Using the assertEqual function
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -6,16 +6,17 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const findKey = function(object, callback) {
-  for (let key in object) {
-    if (callback(object[key])) {
-      return key;
+const findKey = function(object, callback) { // Function to find a key in an object based on a callback condition
+  for (let key in object) {  // Looping through the keys of the object
+    if (callback(object[key])) { // Checking if the callback condition is met for the current key's value
+      return key; // Returning the key if condition is met
     }
   }
-  return undefined;
+  return undefined; // Returning undefined if no key satisfies the condition
 
 };
 
+// Object containing restaurant names and their star ratings
 const restaurants = {
   "Blue Hill": { stars: 1 },
   "Akaleri": { stars: 3 },
@@ -25,6 +26,7 @@ const restaurants = {
   "Akelarre": { stars: 3 }
 };
 
+// Test case using findKey function to find keys based on star ratings
 const results1 = findKey(restaurants, x => x.stars === 2);
 assertEqual(results1, "noma");
 

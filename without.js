@@ -1,4 +1,4 @@
-const assertArraysEqual = function(arr1, arr2) {
+const assertArraysEqual = function(arr1, arr2) { // Using the assertArraysEqual function
   const arraysAreEqual = eqArrays(arr1, arr2);
 
   if (arraysAreEqual) {
@@ -10,7 +10,7 @@ const assertArraysEqual = function(arr1, arr2) {
 };
 
 
-const eqArrays = function(arr1, arr2) {
+const eqArrays = function(arr1, arr2) { // Using the eqArrays function
   if (arr1.length !== arr2.length) {
     return false;
   }
@@ -25,19 +25,19 @@ const eqArrays = function(arr1, arr2) {
 
 
 const without = function(source, itemsToRemove) {
-  const filteredArray = [];
+  const filteredArray = []; // Array to store filtered elements
 
-  for (let i = 0; i < source.length; i++) {
-    if (!itemsToRemove.includes(source[i])) {
+  for (let i = 0; i < source.length; i++) {  // Loop through the source array
+    if (!itemsToRemove.includes(source[i])) { // If the current element is not in itemsToRemove, add it to the filteredArray
       filteredArray.push(source[i]);
     }
   }
 
-  return filteredArray;
+  return filteredArray; // Return the filtered array
 
 };
 
-
+// Test cases
 const words = ["hello", "world", "lighthouse"];
 
 assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); // Should pass

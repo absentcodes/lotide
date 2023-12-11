@@ -1,8 +1,7 @@
-const eqArrays = function(arr1, arr2) {
+const eqArrays = function(arr1, arr2) { // Using eqArrays function 
   if (arr1.length !== arr2.length) {
     return false;
   }
-  
   
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
@@ -13,7 +12,7 @@ const eqArrays = function(arr1, arr2) {
 };
 
 
-const eqObjects = function(object1, object2) {
+const eqObjects = function(object1, object2) { //Using eqObjects function
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);
 
@@ -35,17 +34,19 @@ const eqObjects = function(object1, object2) {
 
 
 
-const assertObjectEqual = function(actual, expected) {
-  const inspect = require('util').inspect;
+const assertObjectEqual = function(actual, expected) { // Defining assertObjectEqual function to assert the equality of two objects
+  const inspect = require('util').inspect;  // Utilizing inspect to convert objects into strings for better comparison output
   const areEqual = eqObjects(actual, expected);
 
-  if (areEqual) {
+  if (areEqual) { // Checking if the objects are equal and logging the assertion result
     console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
   }
 };
 
+
+// Test cases to check object equality using assertObjectEqual function
 const oldPalestine = {
   children: "more than half",
   adults: "less than half"
